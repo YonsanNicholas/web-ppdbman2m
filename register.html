@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Form Pendaftaran Siswa</title>
+  <link rel="stylesheet" href="styles/register_style.css" />
+</head>
+<body>
+
+  <div class="form-container-2col">
+    <h2>Formulir Pendaftaran Siswa</h2>
+
+    <form action="#" method="POST" enctype="multipart/form-data">
+
+      <fieldset class="fieldset-custom">
+        <legend class="legend-custom">Data Pribadi Siswa</legend>
+        <div class="form-grid">
+          <div>
+            <label for="namaLengkap">Nama Lengkap</label>
+            <input type="text" id="namaLengkap" name="namaLengkap" required />
+
+            <label for="tempatLahir">Tempat Lahir</label>
+            <input type="text" id="tempatLahir" name="tempatLahir" required />
+
+            <label for="jenisKelamin">Jenis Kelamin</label>
+            <select id="jenisKelamin" name="jenisKelamin" required></select>
+
+            <label for="alamatRumah">Alamat Rumah</label>
+            <input type="text" id="alamatRumah" name="alamatRumah" required />
+          </div>
+          <div>
+            <label for="nomorHp">Nomor Telepon/WhatsApp aktif</label>
+            <input type="tel" id="nomorHp" name="nomorHp" required />
+
+            <label for="tanggalLahir">Tanggal Lahir</label>
+            <input type="date" id="tanggalLahir" name="tanggalLahir" required />
+
+            <label for="email">Email aktif</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset class="fieldset-custom">
+        <legend class="legend-custom">Data Orang Tua/Wali</legend>
+        <div class="form-grid">
+          <div>
+            <label for="namaOrtu">Nama Lengkap Orang Tua/Wali</label>
+            <input type="text" id="namaOrtu" name="namaOrtu" required />
+
+            <label for="statusOrtu">Status Orang Tua</label>
+            <select id="statusOrtu" name="statusOrtu" required></select>
+
+            <label for="pekerjaanOrtu">Pekerjaan Orang Tua/Wali</label>
+            <input type="text" id="pekerjaanOrtu" name="pekerjaanOrtu" required />
+          </div>
+          <div>
+            <label for="alamatOrtu">Alamat Rumah Orang Tua/Wali</label>
+            <input type="text" id="alamatOrtu" name="alamatOrtu" required/>
+
+            <label for="nomorHpOrtu">Nomor Telepon/HP Orang Tua/Wali</label>
+            <input type="tel" id="nomorHpOrtu" name="nomorHpOrtu" required />
+
+            <label for="emailOrtu">Email Orang Tua/Wali (opsional)</label>
+            <input type="email" id="emailOrtu" name="emailOrtu" />
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset class="fieldset-custom">
+        <legend class="legend-custom">Data Pendidikan Sebelumnya</legend>
+        <div class="form-grid">
+          <div>
+            <label for="provinsi">Provinsi Asal Sekolah</label>
+            <select id="provinsi" name="provinsi" required></select>
+
+            <label for="kota">Kota/Kabupaten Asal Sekolah</label>
+            <select id="kota" name="kota" required></select>
+
+            <label for="asalSekolah">Asal Sekolah</label>
+            <select id="asalSekolah" name="asalSekolah" required></select>
+
+            <label for="tahunLulus">Tahun Lulus</label>
+            <input type="number" id="tahunLulus" name="tahunLulus" min="1900" max="2099" required />
+          </div>
+        </div>
+      </fieldset>
+
+      <!-- Bagian Data Tambahan dibuat 2 kolom -->
+      <fieldset class="fieldset-custom">
+        <legend class="legend-custom">Data Tambahan</legend>
+        <div class="form-grid">
+          <div>
+            <label for="noKK">Nomor Kartu Keluarga (KK)</label>
+            <input type="text" id="noKK" name="noKK" required />
+
+            <label for="noNIK">Nomor Induk Kependudukan (NIK)</label>
+            <input type="text" id="noNIK" name="noNIK" required />
+          </div>
+          <div>
+            <label for="pasFoto">Pas Foto Terbaru</label>
+            <input type="file" id="pasFoto" name="pasFoto" accept="image/*" required />
+
+            <label for="suratSehat">Surat Keterangan Sehat dari Dokter</label>
+            <input type="file" id="suratSehat" name="suratSehat" accept=".pdf,image/*" />
+
+            <label for="suratRekomendasi">Surat Rekomendasi (opsional)</label>
+            <input type="file" id="suratRekomendasi" name="suratRekomendasi" accept=".pdf,image/*" />
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset class="fieldset-custom">
+        <legend class="legend-custom">Pilihan Jurusan</legend>
+        <div class="form-grid">
+          <select id="pilihanJurusan" name="pilihanJurusan" required></select>
+        </div>
+      </fieldset>
+
+      <button type="submit" class="btn-filled">Daftar</button>
+    </form>
+  </div>
+
+  <script src="scripts/register.js"></script>
+</body>
+</html>

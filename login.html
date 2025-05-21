@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Masuk - PPDB MAN 2 Mataram</title>
+  <link rel="stylesheet" href="styles/login_style.css" />
+</head>
+<body>
+  <div class="form-container">
+    <h2>Login PPDB</h2>
+    <form action="#" method="post">
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email" required>
+
+      <label for="password">Password</label>
+      <input type="password" name="password" id="password" required minlength="6">
+
+      <button type="submit" class="btn-filled">Masuk</button>
+    </form>
+    <p>Belum punya akun? <a href="register.html">Daftar di sini</a></p>
+  </div>
+
+  <script>
+    document.querySelector("form").addEventListener("submit", function(e) {
+      e.preventDefault();
+      alert("Fitur login belum tersedia.");
+    });
+  </script>
+</body>
+</html>
