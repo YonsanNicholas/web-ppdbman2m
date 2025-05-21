@@ -168,12 +168,14 @@ nav a:not(.btn-outline):not(.btn-filled) {
 .ekstrakurikuler {
   display: flex;
   gap: 30px;
-  padding: 40px 60px;
+  padding: 40px 20px; /* lebih ramping untuk mobile */
   background-color: #f9f9f9;
+  flex-wrap: wrap; /* supaya anaknya bisa wrap di layar kecil */
+  justify-content: center;
 }
 
 .eskul-logos {
-  width: 120px;
+  flex: 0 1 120px; /* minimal 120px, tapi bisa mengecil */
   max-height: 480px;
   overflow-y: auto;
   border: 2px solid #ddd;
@@ -193,6 +195,8 @@ nav a:not(.btn-outline):not(.btn-filled) {
   border-radius: 50%;
   transition: transform 0.3s;
   border: 2px solid transparent;
+  max-width: 100%;
+  height: auto;
 }
 
 .eskul-logos img:hover {
@@ -201,12 +205,13 @@ nav a:not(.btn-outline):not(.btn-filled) {
 }
 
 .eskul-foto {
-  flex-grow: 1;
+  flex: 1 1 300px; /* bisa melebar dan menyusut, minimal 300px */
   max-width: 800px;
   aspect-ratio: 16 / 9;
   border-radius: 12px;
   overflow: hidden;
   position: relative;
+  min-width: 280px; /* supaya gak terlalu kecil */
 }
 
 .eskul-foto img {
@@ -235,6 +240,59 @@ nav a:not(.btn-outline):not(.btn-filled) {
   transition: opacity 0.3s;
   z-index: 2;
 }
+
+/* MEDIA QUERY untuk layar kecil */
+@media (max-width: 768px) {
+  .ekstrakurikuler {
+    flex-direction: column;
+    padding: 20px 15px;
+  }
+  
+  .eskul-logos {
+    flex: none;
+    width: 100%;
+    max-height: none;
+    flex-direction: row;
+    overflow-x: auto;
+    padding: 10px 0;
+    border: none;
+    gap: 10px;
+  }
+
+  .eskul-logos img {
+    flex: 0 0 auto;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+  }
+
+  .eskul-foto {
+    flex: none;
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: auto;
+    height: auto;
+    position: static;
+    border-radius: 12px;
+  }
+
+  .eskul-foto img {
+    position: relative;
+    height: auto;
+    border-radius: 12px;
+  }
+  
+  .eskul-nama {
+    position: relative;
+    opacity: 1;
+    margin-bottom: 10px;
+    background: transparent;
+    color: #2c3e50;
+    padding: 0;
+    font-size: 24px;
+  }
+}
+
 
 footer {
   background-color: #f4f4f4;
